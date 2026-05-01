@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .animate-bounce-short {
+    animation: bounce-short 1s ease-in-out 1.5;
+  }
+}
+
+.maplibregl-popup-content {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.maplibregl-popup-tip {
+  display: none !important;
+}
+
+@keyframes bounce-short {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+strong {
+  font-weight: 600;
+  color: #fff;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
